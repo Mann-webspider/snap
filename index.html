@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./static/images/favicon-32x32.png" type="image/x-icon">
+    <title>Snap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+
+        let menu = document.getElementById("side")
+        
+        
+        function toggleMenu(){
+          document.getElementById("side").classList.remove("hidden")
+          
+        }
+        function toggleHam(){
+          document.getElementById("side").classList.add("hidden")
+          
+        }
+      </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+        
+      </style>
+      <style>
+        
+        
+      </style>
+      
+      
+</head>
+<body >
+  <div class="z-1 absolute w-72 h-screen bg-white hidden right-0 shadow-2xl shadow-black md:w-[70vw]" id="side">
+    <a onclick="toggleHam()" >
+
+      <img src="/static/images/icon-close-menu.svg" id="close" class=" text-sm float-right mt-5 mr-5 md:h-12 lg:hidden" alt="">
+    </a>
+      
+    <div class="list text-gray-500 font-medium text-lg ml-8 grid grid-rows-4 gap-5 mt-24 md:text-[2rem] md:gap-12 md:mt-48">
+      <p>Features</p>
+      <p>Company</p>
+      <p>Careers</p>
+      <p>About</p>
+    </div>
+
+    <div class="btn grid grid-rows-2 place-content-center gap-5 text-gray-500 font-medium text-lg mt-12 md:text-[2rem]">
+      <button class="border-none ">Login</button>
+      <button class="border border-2 rounded-2xl border-gray-500 px-20 py-2 md:px-48 md:py-6 md:rounded-4xl">Register</button>
+    </div>
+  </div>
+  <div >  
+    <header class="w-screen flex justify-between lg:justify-start ">
+        <!-- <div class="font-medium text-5xl px-5 py-1">snap</div> -->
+
+
+          <img src="./static/images/logo.svg" class="h-8 mt-6 ml-5 md:h-12 lg:h-6 lg:ml-24" alt="">
+          <a onclick="toggleMenu()">
+            
+            <img src="/static/images/icon-menu.svg" class="h-5 mr-4 mt-6 md:h-9 lg:hidden" id="ham" alt="" >
+          </a>
+          <div class="list text-gray-500 lg:font-medium lg:text-sm hidden lg:block lg:grid lg:grid-cols-4 lg:gap-5  lg:mt-5 lg:ml-24 md:hidden sm:hidden">
+            <p>Features</p>
+            <p>Company</p>
+            <p>Careers</p>
+            <p>About</p>
+          </div>
+        
+
+        <div class="btn lg:grid lg:grid-cols-2 lg:place-content-center lg:gap-5 text-gray-500 font-medium lg:text-sm   lg:right-5 lg:absolute lg:top-5 hidden lg:block md:hidden ">
+          <button class="border-none active:text-black">Login</button>
+          <button class="border border-2 rounded-xl border-gray-500 lg:px-6 lg:py-2 active:text-black active:border-black">Register</button>
+        </div>
+        
+    </header>
+    <section class="hero md:flex md:flex-col md:jusify-between md:h-90 md:items-center md:mt-12 lg:flex-row-reverse lg:flex lg:justify-evenly lg:w-screen  lg:h-[80vh] lg:mt-0">
+      <div class="mt-6  lg:w-[25vw]   lg:h-full ">/
+        <img src="/static/images/image-hero-mobile.png" class="block lg:hidden " alt="">
+        <img src="/static/images/image-hero-desktop.png" class="hidden lg:block lg:w-[60vw]  " alt="">
+      </div>
+      <div class="text-center mt-8 md:h-72 lg:text-left  lg:ml-32 lg:w-[40vw] lg:flex lg:flex-col  lg:h-4/5 ">
+        
+        <div class="lg:w-2/3 lg:my-5">
+          <h1 class="text-[2rem] font-bold md:text-[5rem] lg:text-[4rem] lg:leading-none">Make remote work</h1>
+        </div>
+        <div class="lg:w-1/2 lg:my-5">
+
+          <p class="text-gray-500 p-5 font-medium text-md md:text-[2rem]  lg:text-[1rem]  lg:p-0">Get your team in sync, no matter your location Streamline processes, create team rituals, and watch productivity soar.</p>
+        </div>
+        <div >
+
+          <button class="border bg-black text-white rounded-2xl px-6 py-3 mt-2  font-medium text-md md:text-[2.3rem] lg:text-[1rem] lg:my-5 active:bg-transparent active:text-black active:border-black">Learn more</button>
+        </div>
+
+        <div class="grid grid-cols-4 gap-4 px-4 mt-14 md:px-6 md:mt-32    ">
+          <img src="/static/images/client-databiz.svg"   class="md:h-10 lg:h-6" alt="">
+          <img src="/static/images/client-audiophile.svg" class="md:h-10 lg:h-6" alt="">
+          <img src="/static/images/client-meet.svg" class="md:h-10 lg:h-6" alt="">
+          <img src="/static/images/client-maker.svg" class="md:h-10 lg:h-6" alt="">
+        </div>
+      </div>
+        
+      
+
+    </section>
+  </div>
+</body>
+</html>
